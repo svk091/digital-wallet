@@ -6,6 +6,9 @@
     "bcrypt": "^5.1.1"
   },
   "type": "module",
+  "scripts": {
+    "postinstall": "prisma generate"
+  },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
