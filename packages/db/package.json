@@ -1,23 +1,23 @@
 {
   "name": "@repo/db",
   "version": "0.0.0",
-  "dependencies": {
-    "@prisma/client": "^5.11.0",
-    "bcrypt": "^5.1.1"
-  },
   "type": "module",
   "scripts": {
     "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "bcrypt": "^5.1.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/bcrypt": "^5.0.2",
-    "@types/node": "^20.11.24",
-    "eslint": "^8.57.0",
-    "prisma": "5.11.0",
+    "@types/node": "^22.5.4",
+    "eslint": "^9.10.0",
+    "prisma": "5.19.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.6.2"
   },
   "exports": {
     "./client": "./src/client.ts",
