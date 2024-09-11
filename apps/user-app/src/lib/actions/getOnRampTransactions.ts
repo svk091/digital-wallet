@@ -2,8 +2,7 @@
 
 import { getServerSession } from "next-auth"
 import { authOptions } from "../auth"
-import prisma from "@repo/db/client";
-
+import prisma, { OnRampStatus } from "@repo/db/client";
 export const getOnRampTransactions = async ({ limit }: { limit?: number } = {}) => {
   const session = await getServerSession(authOptions);
   const id = Number(session?.user.id);
@@ -15,7 +14,15 @@ export const getOnRampTransactions = async ({ limit }: { limit?: number } = {}) 
       take: limit
     })
   })
-  return txns.map((t) => (
+  return txns.map((t: {
+    id: number;
+    status: OnRampStatus;
+    token: string;
+    provider: string;
+    amount: number;
+    startTime: Date;
+    userId: number;
+  }) => (
     {
       time: t.startTime,
       amount: t.amount,
