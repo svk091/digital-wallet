@@ -1,0 +1,24 @@
+{
+  "name": "@repo/store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "exports": {
+    "./useBalance": "./src/hooks/useBalance"
+  },
+  "dependencies": {
+    "recoil": "^0.7.7",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^20.11.24"
+  }
+}

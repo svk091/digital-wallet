@@ -1,0 +1,26 @@
+{
+  "name": "@repo/db",
+  "version": "0.0.0",
+  "dependencies": {
+    "@prisma/client": "^5.11.0",
+    "bcrypt": "^5.1.1"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^20.11.24",
+    "eslint": "^8.57.0",
+    "prisma": "5.11.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "exports": {
+    "./client": "./src/client.ts",
+    "./jsclient": "./dist/client.js"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  }
+}
